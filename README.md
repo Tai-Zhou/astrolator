@@ -1,2 +1,2 @@
-# astrolator
+# Astrolator
 Astro-Calculator.
