@@ -8,6 +8,10 @@
     * [WeChatWebDevTools](#wechatwebdevtools)
     * [Node.js](#nodejs)
   * [Code](#code)
+    * [Structure](#structure)
+    * [Components](#components)
+      * [Basic](#basic)
+      * [miniprogram-component-plus](#miniprogram-component-plus)
 * [Contributing](#contributing)
 * [Acknowledgements](#acknowledgements)
   * [Logo](#logo)
@@ -41,18 +45,56 @@ brew install node
 
 ## Code
 
-To be uploaded.
+Open the [src](./src) folder in WeChatWebDevTools.
+
+### Structure
+
+* [app.js](src/app.js): Mini-program logic
+* [app.json](src/app.json): Common configurations for mini-program
+* [app.wxss](src/app.wxss): Common style sheet for mini-program
+* [pages](src/pages): Different pages
+  * *.js: Page logic
+  * *.wxml: Page structure
+  * *.json: Page configuration
+  * *.wxss: Page style sheet
+* [utils](src/utils):
+  * [Mixins.js](src/utils/Mixins.js): Add mixins function
+  * [themeChanged.js](src/utils/themeChanged.js): Change theme between light/dark mode
+* [theme.json](src/theme.json): Theme configurations.
+
+### Components
+#### Basic
+
+```
+"useExtendedLib": {
+  "weui": true
+}
+```
+
+#### miniprogram-component-plus
+
+* index-list
+  * modified display for numbers
+  * fixed vibration
+* tabs
+  * different heights for subpages
 
 # Contributing
 
 * Feedback in Astrolator
-* Create an issue
+* Create an issue:
+  1. Click the "Issues" buttom: ![Issues](img/issues.png)
+  2. Search for existing issues: ![Search](img/open_issue.png)
+  3. If not found, click the green button to open a new issue.
 * Create a pull request:
-  1. Fork the Project
-  2. Write your code
-  3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-  4. Push to the Branch (`git push`)
-  5. Open a Pull Request
+  1. Fork the repository: ![Fork](img/fork.png)
+  2. Edit the code in your own repository.
+  3. Commit your modification to your own repository (`git commit -m 'Add something'`).
+  4. Push to the Branch (`git push`).
+  5. Click the "Pull request" buttom in **this repository**: ![Issues](img/issues.png)
+  6. Click the green button to create a pull request: ![Pull Request](img/pr.png)
+  7. Click "compare across forks" and choose your fork: ![Compare](img/compare.png)
+  8. Create a pull request.
 
 # Acknowledgements
 ## Logo
@@ -69,4 +111,4 @@ A great photo taken by [Bryan Goff](https://unsplash.com/@bryangoffphoto) @ Unsp
 
 # License
 
-TBD
+[MIT License](LICENSE)
