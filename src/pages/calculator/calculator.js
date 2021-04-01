@@ -109,10 +109,10 @@ var pageData = {
     precessionCal() {
         if (this.data.precessionInput0 == 0 || this.data.precessionInput1 == 0 || this.data.precessionInput2 === '' || this.data.precessionInput2 > 1)
             return this.setData({ precessionOutput: 0, precessionDisplay: '' })
-        var output = 0, coeff = app.globalData.G * this.data.precessionInput0 / app.globalData.massRatio[this.data.precessionIndex0] / app.globalData.c ** 2 / app.globalData.lengthRatio[this.data.precessionIndex1] / (1 - this.data.precessionInput2 ** 2)
-        if (this.data.precessionIndex3 != 1)
+        var output = 0, coeff = app.globalData.G * this.data.precessionInput0 / app.globalData.massRatio[this.data.precessionIndex0] / app.globalData.c ** 2 / this.data.precessionInput1 * app.globalData.lengthRatio[this.data.precessionIndex1] / (1 - this.data.precessionInput2 ** 2)
+        if (this.data.precessionIndex2 != 1)
             output += 6 * Math.PI * coeff
-        if (this.data.precessionIndex3 != 0)
+        if (this.data.precessionIndex2 != 0)
             output += Math.PI * (28 - this.data.precessionInput2 ** 2) * coeff ** 2 / 2
         this.setData({
             precessionOutput: output,

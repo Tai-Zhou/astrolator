@@ -3,7 +3,7 @@ App({
     globalData: {
         sysInfo: wx.getSystemInfoSync(),
         theme: wx.getSystemInfoSync().theme,
-        version: "0.16.201120",
+        version: "0.16.210401",
         G: 6.6743e-11,
         c: 299792458,
         h: 6.62607004e-34,
